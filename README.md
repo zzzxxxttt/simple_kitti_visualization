@@ -32,7 +32,7 @@ and [Semantic Kitti](http://www.semantic-kitti.org/) dataset.
 ## Semantic Kitti
 
 ### semantic label to point cloud
-<img src="https://github.com/zzzxxxttt/simple_kitti_visualization_scripts/blob/master/examples/semantic_kitti_label_to_cloud.png"/>
+<img src="https://github.com/zzzxxxttt/simple_kitti_visualization/blob/master/examples/semantic_kitti_label_to_cloud.png"/>
 
 
 
