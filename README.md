@@ -1,6 +1,6 @@
 # simple Kitti visualization scripts
 
-This repository contains simple visiualization scripts 
+This repository contains simple visualization scripts 
 for [Kitti](http://www.cvlibs.net/datasets/kitti/) 
 and [Semantic Kitti](http://www.semantic-kitti.org/) dataset.
  
