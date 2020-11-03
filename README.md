@@ -18,6 +18,9 @@ and [Semantic Kitti](http://www.semantic-kitti.org/) dataset.
 ### 3d bounding box to point cloud
 <img src="https://github.com/zzzxxxttt/simple_kitti_visualization/blob/master/examples/kitti_3dbox_to_cloud.png"/>
 
+### image to point cloud
+<img src="https://github.com/zzzxxxttt/simple_kitti_visualization/blob/master/examples/kitti_img_to_cloud.png"/>
+
 ### 2d bounding box to image
 <img src="https://github.com/zzzxxxttt/simple_kitti_visualization/blob/master/examples/kitti_bbox_to_img.png"/>
 

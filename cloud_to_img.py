@@ -28,17 +28,17 @@ if __name__ == '__main__':
     R0 = np.array(lines[4].strip().split(' ')[1:], dtype=np.float32).reshape(3, 3)
     V2C = np.array(lines[5].strip().split(' ')[1:], dtype=np.float32).reshape(3, 4)
 
-  fig = plt.figure(figsize=(10, 5))
+  fig = plt.figure(figsize=(12, 6))
   # draw image
   plt.imshow(img)
 
   # transform the pointcloud from velodyne coordiante to camera_0 coordinate
-  scan_hom = np.hstack((scan[:, :3], np.ones((scan.shape[0], 1), dtype=np.float32)))
-  scan_C0 = np.dot(scan_hom, np.dot(V2C.T, R0.T))
+  scan_hom = np.hstack((scan[:, :3], np.ones((scan.shape[0], 1), dtype=np.float32))) # [N, 4]
+  scan_C0 = np.dot(scan_hom, np.dot(V2C.T, R0.T)) # [N, 3]
 
   # transform the pointcloud from camera_0 coordinate to camera_2 coordinate
-  scan_C0_hom = np.hstack((scan_C0, np.ones((scan.shape[0], 1), dtype=np.float32)))
-  scan_C2 = np.dot(scan_C0_hom, P2.T)
+  scan_C0_hom = np.hstack((scan_C0, np.ones((scan.shape[0], 1), dtype=np.float32))) # [N, 4]
+  scan_C2 = np.dot(scan_C0_hom, P2.T) # [N, 3]
   scan_C2_depth = scan_C2[:, 2]
   scan_C2 = (scan_C2[:, :2].T / scan_C2[:, 2]).T
 
